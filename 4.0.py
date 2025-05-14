@@ -6,7 +6,7 @@ import pandas as pd
 class EnergyStorageApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("储能技术综合评估系统")
+        self.root.title("多应用情境下新型储能技术评估系统")
         self.root.geometry("1000x700")
 
         # 初始化示例数据
@@ -51,7 +51,7 @@ class EnergyStorageApp:
         # 顶部标题
         header = ttk.Frame(self.root)
         header.pack(pady=20, fill=tk.X)
-        ttk.Label(header, text="储能技术综合评估系统",
+        ttk.Label(header, text="多应用情境下新型储能技术评估系统",
                   font=("微软雅黑", 16, "bold"),
                   foreground="#0052cc").pack()
 
