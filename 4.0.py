@@ -56,7 +56,7 @@ class EnergyStorageApp:
                   foreground="#0052cc").pack()
 
         # 应用选择区域
-        selection_frame = ttk.LabelFrame(self.root, text="1. 选择应用场景")
+        selection_frame = ttk.LabelFrame(self.root, text="1. 选择应用情境")
         selection_frame.pack(padx=20, pady=10, fill=tk.X)
 
         self.app_vars = []
@@ -67,7 +67,7 @@ class EnergyStorageApp:
             self.app_vars.append((app, var))
 
         # 时间输入区域（动态生成）
-        self.input_frame = ttk.LabelFrame(self.root, text="2. 设置时间分配（小时）")
+        self.input_frame = ttk.LabelFrame(self.root, text="2. 设置时间分配")
         self.input_frame.pack(padx=20, pady=10, fill=tk.BOTH, expand=True)
 
         # 结果展示区域
@@ -95,7 +95,7 @@ class EnergyStorageApp:
         selected_apps = [app for app, var in self.app_vars if var.get()]
 
         if not selected_apps:
-            messagebox.showwarning("警告", "请至少选择一个应用场景！")
+            messagebox.showwarning("警告", "请至少选择一个应用情境！")
             return
 
         # 筛选技术
